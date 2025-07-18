@@ -38,7 +38,7 @@ else:
 #Learning loops
 #Mini Challenge
 
-toContinue = True
+'''toContinue = True
 
 while toContinue:
     n = input("Enter a number or type 'exit' to quit: ")
@@ -51,4 +51,20 @@ while toContinue:
         n = int(n)
     
     for i in range(1,11):
-        print(f"{n} X {i} = {n*i}")
+        print(f"{n} X {i} = {n*i}")'''
+
+#Learning Lists & Strings
+
+'''fruits = ['apple','mango','orange']
+
+for fruit in fruits:
+    if fruit == 'apple':
+        idx = fruits.index(fruit)
+        fruits[idx] = 'pomogranate'
+print(fruits)'''
+
+#mini challenege
+groceryList = ["milk", "eggs", "bread", "butter", "toothpaste"]
+
+groceryList = ['cheese' if item == 'toothpaste' else item for item in groceryList]
+print(groceryList)
