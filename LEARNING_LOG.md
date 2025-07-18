@@ -16,6 +16,5 @@ A chronological record of my daily/weekly learning milestones in Python and rela
 
 ## 2025-07-18
 
-- Wrote Python code for loops and functions.
-- Researched how to set up and use Codespaces efficiently.
-- Logged new Git commands and tips in `git_notes.md`.
+- Wrote Python code for loops and conditionals
+- completed a ini challenge of creating a to do list manager
