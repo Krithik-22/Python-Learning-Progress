@@ -7,11 +7,11 @@ isCool = True
 #print(name, age, height, isCool)
 
 #Mini challenge
-userName = input("Enter your name: ")
+'''userName = input("Enter your name: ")
 userAge = int(input("Enter your age: "))
 #print("Hello ", userName, ", In 5 years you will be ", userAge + 5)
 print(f"Hello {userName}! In 5 years you will be {userAge + 5}")
-
+'''
 #Learning Operators & Expressions
 #Mini Challenge
 '''num1 = int(input("Enter a number: "))
@@ -26,7 +26,7 @@ else:
 '''
 #Learning Conditionals
 #Mini Challenge
-haveVoterId = input("Do you have a Voter ID? ")
+'''haveVoterId = input("Do you have a Voter ID? ")
 
 if userAge >= 18 and haveVoterId == 'yes':
     print('You are eligible to vote')
@@ -34,3 +34,21 @@ elif userAge >= 18 and haveVoterId == 'no':
     print('You are eligible to vote but you need a voter ID')
 else:
     print('You cannot vote')
+'''
+#Learning loops
+#Mini Challenge
+
+toContinue = True
+
+while toContinue:
+    n = input("Enter a number or type 'exit' to quit: ")
+
+    if n == 'exit':
+        #toContinue = False
+        break;
+
+    if n.isdigit():
+        n = int(n)
+    
+    for i in range(1,11):
+        print(f"{n} X {i} = {n*i}")
