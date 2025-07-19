@@ -64,7 +64,39 @@ for fruit in fruits:
 print(fruits)'''
 
 #mini challenege
-groceryList = ["milk", "eggs", "bread", "butter", "toothpaste"]
+'''groceryList = ["milk", "eggs", "bread", "butter", "toothpaste"]
 
 groceryList = ['cheese' if item == 'toothpaste' else item for item in groceryList]
-print(groceryList)
+print(groceryList)'''
+
+
+'''⚔️ Mini Reiteration Challenge:
+>> Create a list of your favorite three movies. Then:
+>> Add one more using append().
+>> Replace the second movie with "The Matrix".
+>> Remove the last one using pop().
+>> Check if "Inception" is in your list.
+>> Convert all movie names to uppercase using a loop and print them.'''
+
+'''movies = ["Coolie","F1","Leo"]
+movies.append("Vikram")
+print(movies)
+movies[1] = "The Matrix"
+print(movies)
+movies.pop()
+print(movies)
+if "Inception" in movies:
+    print("Inception is in movies list")
+else:
+    print("Inception is not in movies list")
+
+i = 0
+for movie in movies:
+    movies[i] = movie.lower()
+    i+=1
+
+print(movies)'''
+
+
+#slicing
+print(name[0:10:2])
