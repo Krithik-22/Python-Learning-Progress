@@ -19,8 +19,13 @@ A chronological record of my daily/weekly learning milestones in Python and rela
 - Wrote Python code for loops and conditionals
 - completed a ini challenge of creating a to do list manager
 
-## 2025-07-18
+## 2025-07-19
 
 - Refactored to do list manager
 - Reiterated Lists & Strings lessons
 - Started functions lessons
+
+## 2025-07-21
+- Learnt about Tuples and Dictionary(Basics)
+- Also learnt the syntax of List comprehension
+- Deep dived in =to functions topic

@@ -99,4 +99,33 @@ print(movies)'''
 
 
 #slicing
-print(name[0:10:2])
+#print(name[0:10:2])
+
+
+
+#Tuples and dictionary
+
+myTuple = (10,20,30,40)
+
+#print(myTuple)
+
+person = {
+    name:"f{name}",
+    age: "f{age}",
+    "hobbies":"[Cricket, Code, gym]"
+}
+
+#print(person)
+
+book = {
+    "Title":"Harry Potter",
+    "Author":"Krithik",
+    "year":2025
+}
+
+for key,value in book.items():
+    print(f"{key}: {value}")
+
+book["genre"] = "Fiction"
+
+print(book)
