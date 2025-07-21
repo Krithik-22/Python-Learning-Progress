@@ -123,9 +123,34 @@ book = {
     "year":2025
 }
 
-for key,value in book.items():
-    print(f"{key}: {value}")
+'''for key,value in book.items():
+    print(f"{key}: {value}")'''
 
 book["genre"] = "Fiction"
 
-print(book)
+#print(book)
+
+def testArgs(*args):
+    print(args)
+
+def testKwargs(**kwargs):
+    print(kwargs)
+
+'''testArgs(1,2,3,4,5,6)
+testKwargs(name="krithik",age=22,hobbies=['cricket','gym','code'])
+'''
+'''⚔️ Mini Challenge:
+Write a function called log_expense that takes:
+- A fixed argument date
+- A variable number of *items (like food, transport, etc.)
+- And keyword arguments **costs (like food=100, transport=50)'''
+
+def logExpense(date,*items,**costs):
+    print(f"on {date}\nItems: {items}\nCost: {costs}")
+
+#logExpense('21-07-2025','food','transport','utils',food=200,transport=500,utils=300)
+
+set = {1,2,3,4,5}
+set.discard(6)
+
+print(set)

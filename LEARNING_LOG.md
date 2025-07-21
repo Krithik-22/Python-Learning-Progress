@@ -28,4 +28,5 @@ A chronological record of my daily/weekly learning milestones in Python and rela
 ## 2025-07-21
 - Learnt about Tuples and Dictionary(Basics)
 - Also learnt the syntax of List comprehension
-- Deep dived in =to functions topic
+- Deep dived in to functions topic
+- Sets and Dictionaries
