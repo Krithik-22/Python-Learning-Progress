@@ -30,3 +30,7 @@ A chronological record of my daily/weekly learning milestones in Python and rela
 - Also learnt the syntax of List comprehension
 - Deep dived in to functions topic
 - Sets and Dictionaries
+
+## 2025-07-22
+- Done with File Handling lessons
+- List and Dictionary comprehension challenges

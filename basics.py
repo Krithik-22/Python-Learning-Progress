@@ -154,3 +154,25 @@ set = {1,2,3,4,5}
 set.discard(6)
 
 print(set)
+
+
+#List comprehension
+nums = [1, 2, 3, 4, 5]
+squares = [n*n for n in nums]
+even_squares = [n*n for n in nums if n%2==0]
+#print(even_squares)
+
+
+#nested list comprehension
+#Challenge convert this to 2D list to a 1D list
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+'''wrong way to do it
+matrix_1d = [n for n in (num for num in matrix)]'''
+
+matrix_1d = [n for row in matrix for n in row]
+print(matrix_1d)
