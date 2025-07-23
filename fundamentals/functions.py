@@ -1,3 +1,6 @@
+from functools import reduce
+
+
 def welcomUser(name="there"):
     print(f"Hello {name}")
 
@@ -74,3 +77,52 @@ names_starting_w_s = list(filter(lambda x: x[0]=='S',names))
 
 #print(names_starting_w_s)
 words = ['apple', 'banana', 'apple', 'cherry', 'date', 'banana', 'elderberry']
+
+
+
+#lessons of zip() and enumerate()
+names = ["Krithik", "Dhoni", "Kohli"]
+scores = [90, 85, 88]
+
+#To create a dictionary where key is the name and value is the score
+
+match_score = {name:score for name,score in zip(names,scores)}
+print(match_score)
+
+
+items = ["pen", "notebook", "eraser"]
+#To create key - index and value - item
+items_dict = {idx:item for idx,item in enumerate(items)}
+print(items_dict)
+
+
+subjects = ["Math", "Science", "History"]
+marks = [78, 89, 91]
+
+#To create a dictionary key - index and value - tuple like(Math, 78)
+
+subject_mark = {idx:mark for idx,mark in enumerate(zip(subjects,marks))}
+print(subject_mark)
+
+
+
+#reduce() function
+
+words = ["python", "reduce", "is", "awesome", "functional", "power"]
+longest = reduce(lambda x,y:x if len(x) > len(y) else y,words)
+
+print(longest)
+
+
+'''
+Input
+words = ["apple", "banana", "grape"]
+Output
+{'a': 4, 'p': 3, 'l': 1, 'e': 2, 'b': 1, 'n': 2, 'g': 1, 'r': 1}
+'''
+
+word_count = {}
+
+reduce(lambda x,y: word_count[l] += 1 if l in word_count else word_count[l] = 1 for l in x,"")
+
+print(word_count)
