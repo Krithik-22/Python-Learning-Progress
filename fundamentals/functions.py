@@ -120,9 +120,3 @@ words = ["apple", "banana", "grape"]
 Output
 {'a': 4, 'p': 3, 'l': 1, 'e': 2, 'b': 1, 'n': 2, 'g': 1, 'r': 1}
 '''
-
-word_count = {}
-
-reduce(lambda x,y: word_count[l] += 1 if l in word_count else word_count[l] = 1 for l in x,"")
-
-print(word_count)
