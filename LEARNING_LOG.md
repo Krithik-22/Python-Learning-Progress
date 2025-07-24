@@ -35,3 +35,6 @@ A chronological record of my daily/weekly learning milestones in Python and rela
 - Done with File Handling lessons
 - Lambda functions with map(),filter(),sort()
 - List and Dictionary comprehension challenges
+
+## 2025-07-24
+- Started with OOP
