@@ -38,3 +38,9 @@ A chronological record of my daily/weekly learning milestones in Python and rela
 
 ## 2025-07-24
 - Started with OOP
+- Learned about classes, __init__, self and creating an object
+
+## 2025-07-26
+- Learned about Inheritance and its syntax
+- Learned about Polymorphism(only function overriding)
+- Got to know that python doesn't have function overloading😂, but the same functionality can be faked using different ways
