@@ -44,3 +44,6 @@ A chronological record of my daily/weekly learning milestones in Python and rela
 - Learned about Inheritance and its syntax
 - Learned about Polymorphism(only function overriding)
 - Got to know that python doesn't have function overloading😂, but the same functionality can be faked using different ways
+
+## 2025-07-27
+- Learned about static and class methods

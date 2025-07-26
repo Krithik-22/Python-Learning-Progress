@@ -26,7 +26,7 @@ class AudioBook(Book):
     def describe(self):
         print(f"Audio Book: {self.title} by {self.author} - {self.duration} Min(s)")
 
-bookshelf = []
+'''bookshelf = []
 
 talk_to_anyone = Book("how to Talk to Anyone", "Krithik")
 atomic_habits_ebook = EBook("Atomic Habits","Krithik",5)
@@ -37,7 +37,7 @@ bookshelf.append(atomic_habits_ebook)
 bookshelf.append(ikigai_audio)
 
 for book in bookshelf:
-    book.describe()
+    book.describe()'''
 
 '''n = int(input('Enter the number of books you want to create: '))
 
@@ -56,3 +56,33 @@ long_books = [book for book in bookshelf if book.is_long_title()]
 print("These are all the long books in the shelf!!")
 for book in long_books:
     book.describe()'''
+
+'''🧠 Challenge:
+Create a class called Validator with two methods:
+@staticmethod is_valid_email(email)
+returns True if '@' in email and ends with .com
+@classmethod show_total(cls)
+Print how many emails were validated using this class
+'''
+
+
+class Validator:
+    validated = 0
+
+    @staticmethod
+    def is_valid_email(email):
+        Validator.validated += 1
+        if '@' in email and email.endswith('.com'):
+            return True
+        return False
+    
+    @classmethod
+    def show_total(cls):
+        print(f"{cls.validated} emails were validated using this class")
+
+email = 'abc@gmail.com123'
+Validator.is_valid_email(email)
+Validator.show_total()
+email1='bca@gmail.com'
+Validator.is_valid_email(email1)
+Validator.show_total()
