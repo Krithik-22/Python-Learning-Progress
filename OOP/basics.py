@@ -1,7 +1,21 @@
 class Book:
+    #Dunder methods
     def __init__(self, title, author):
         self.title = title
         self.author = author
+
+    #When len() is used on object, this is the method called we can customize len() for our class instances
+    def __len__(self):
+        return len(self.title)
+    
+    #when print() is called on our class instance, this is the method it calls, it check for __str__. If __str__ not found it looks for __repr__ in the class. it goes for default __repr__ that will be in the object class
+    def __str__(self):
+        return f"📘 {self.title} by {self.author}"
+    
+    #repr() is used for developer friendly messages to print to debug for the object
+    def __repr__(self):
+        return f"Book(title='{self.title}', author='{self.author}')"
+    
     def describe(self):
         print(f"Book: {self.title} by {self.author}")
     def is_long_title(self):
@@ -10,6 +24,7 @@ class Book:
 
 #Inheritance syntax and all
 class EBook(Book):
+
     def __init__(self, title, author, file_size):
         super().__init__(title,author) #calls parent constructor
         self.file_size = file_size
@@ -25,6 +40,46 @@ class AudioBook(Book):
         self.duration = duration
     def describe(self):
         print(f"Audio Book: {self.title} by {self.author} - {self.duration} Min(s)")
+
+# @static and @class methods(Can go to notes for detailed explanation)
+class Validator:
+    validated = 0
+
+    @staticmethod
+    def is_valid_email(email):
+        Validator.validated += 1
+        if '@' in email and email.endswith('.com'):
+            return True
+        return False
+    
+    @classmethod
+    def show_total(cls):
+        print(f"{cls.validated} emails were validated using this class")
+
+
+#encapsulation challenge
+class SecureNote:
+    def __init__(self, content):
+        self.__content = content
+    
+    def get_content(self):
+        return self.__content
+    
+    def set_content(self,new_content):
+        self.__content = new_content
+
+note = SecureNote('Hellooooo')
+print(note.get_content())
+note.set_content('heyyyy')
+print(note.get_content())
+print(note.__content)#This gives an attribute error
+
+'''email = 'abc@gmail.com123'
+Validator.is_valid_email(email)
+Validator.show_total()
+email1='bca@gmail.com'
+Validator.is_valid_email(email1)
+Validator.show_total()'''
 
 '''bookshelf = []
 
@@ -65,24 +120,49 @@ returns True if '@' in email and ends with .com
 Print how many emails were validated using this class
 '''
 
+'''Challenge:
+Create a class BankAccount with:
 
-class Validator:
-    validated = 0
+Private attribute __balance
 
-    @staticmethod
-    def is_valid_email(email):
-        Validator.validated += 1
-        if '@' in email and email.endswith('.com'):
-            return True
-        return False
+deposit(amount)
+
+withdraw(amount)
+
+get_balance()
+Make sure withdrawal can’t happen if balance is low.'''
+
+class BankAccount:
+    def __init__(self, amount=0):
+        self.__amount = amount
     
-    @classmethod
-    def show_total(cls):
-        print(f"{cls.validated} emails were validated using this class")
+    def deposit(self, add_amount):
+        self.__amount +=add_amount
 
-email = 'abc@gmail.com123'
-Validator.is_valid_email(email)
-Validator.show_total()
-email1='bca@gmail.com'
-Validator.is_valid_email(email1)
-Validator.show_total()
+    def withdraw(self, withdraw_amount):
+        if withdraw_amount > self.__amount:
+            print(f"You do not have that much in your account. Remaining Balance: {self.__amount}")
+        else:
+            self.__amount -= withdraw_amount
+    
+    def get_balance(self):
+        print(f"Balance: {self.__amount}")
+
+class Employee:
+    def __init__(self, name, role):
+        self.name = name
+        self.role = role
+    def describe(self):
+        print(f"I'm {self.name} and I'm a {self.role}")
+    
+class Developer(Employee):
+    def __init__(self,name,role):
+        self.super(name,role)
+    def describe(self):
+        print(f"I'm {self.name} and I'm a {self.role} - Writes code")
+
+class Manager(Employee):
+    def __init__(self,name,role):
+        self.super(name,role)
+    def describe(self):
+        print(f"I'm {self.name} and I'm a {self.role} - manages team")

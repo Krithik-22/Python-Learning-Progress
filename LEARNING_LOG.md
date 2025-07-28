@@ -46,4 +46,6 @@ A chronological record of my daily/weekly learning milestones in Python and rela
 - Got to know that python doesn't have function overloading😂, but the same functionality can be faked using different ways
 
 ## 2025-07-27
-- Learned about static and class methods
+- Learned about static and class methods(Added note to notes.md)
+- Dunder methods(i.e. Double Underscore methods like __init__, __len__, __str__, __repr__)
+- Encapsulation(public, private and protected)

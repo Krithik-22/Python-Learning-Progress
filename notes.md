@@ -13,3 +13,26 @@
 ✅ Static method → no self, no cls
 ✅ Class method → gets cls, not self
 ✅ Instance method → gets self (can also access class vars, but usually not modify them
+
+
+## __str__ and __repr__
+> When you `print(obj)`, Python first uses `__str__()`, if that’s missing it uses `__repr__()`, and if both are missing, it falls back to the default memory address from the base `object` class.
+
+## Encapsulation
+
+| Java/C++    | Python Equivalent | Notes                                         |
+| ----------- | ----------------- | --------------------------------------------- |
+| `public`    | `name`            | Default – fully accessible                    |
+| `protected` | `_name`           | Convention – *“don’t touch unless you must”*  |
+| `private`   | `__name`          | Triggers **name mangling** for access control |
+
+
+🔍 Behind the Scenes (Name Mangling):
+That __content is actually stored as:
+> note._SecureNote__content
+So you could access it like:
+> print(note._SecureNote__content)  # 😈 But you shouldn't.
+🧠 Recap:
+Python doesn’t block access — it discourages it with conventions and name mangling.
+Encapsulation helps prevent accidental changes and lets you add validation if needed later.
+
