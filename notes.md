@@ -36,3 +36,21 @@ So you could access it like:
 Python doesn’t block access — it discourages it with conventions and name mangling.
 Encapsulation helps prevent accidental changes and lets you add validation if needed later.
 
+> Inheritance vs Composition
+🧠 Mental Trick:
+Is-A? ➡️ Use Inheritance
+Has-A? ➡️ Use Composition
+
+⚔️ Real-World Analogy:
+🧱 You don’t build a house by saying:
+"A house is a door, is a window, is a kitchen."
+
+🚀 Instead, you say:
+"A house has a door, has windows, has a kitchen."
+Composition builds complex things out of simple, focused parts.
+
+✅ Summary
+Concept	Use when...
+Inheritance	- One object is a type of another
+Composition - One object uses/has another inside it
+
