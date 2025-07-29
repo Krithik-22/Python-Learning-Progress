@@ -52,3 +52,8 @@ A chronological record of my daily/weekly learning milestones in Python and rela
 
 ## 2025-07-28
 - Inheritance vs Composition
+
+## 2025-07-29
+- Abstraction
+- Abstraction vs Encapsulation
+
