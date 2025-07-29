@@ -54,3 +54,33 @@ Concept	Use when...
 Inheritance	- One object is a type of another
 Composition - One object uses/has another inside it
 
+> Abstraction
+
+In simple words:
+Abstraction is hiding the internal details and showing only the essential parts to the outside world.
+Just like:
+You use a TV remote without knowing how the circuit works.
+
+> Encapsulation vs Abstraction
+✅ Encapsulation
+→ Hides the data
+→ Prevents direct access
+→ Use __private_vars + getters/setters
+→ Keeps your object’s internals safe from misuse
+
+✅ Abstraction
+→ Hides the implementation
+→ Just says: “You must have this method”
+→ Use ABC and @abstractmethod
+→ Lets subclasses implement it their own way
+
+| Concept           | Focus          | Hides           | Example                          |
+| ----------------- | -------------- | --------------- | -------------------------------- |
+| **Encapsulation** | *Protect data* | Data/Attributes | `__balance`, `get_balance()`     |
+| **Abstraction**   | *Simplify use* | Implementation  | `@abstractmethod start_engine()` |
+
+🔁 Real-life analogy to reinforce:
+Encapsulation is like your phone locking with a passcode — you can’t mess with its insides without permission.
+
+Abstraction is like a TV remote — it gives you buttons to press, but you don’t know or care how the electronics work inside.
+

@@ -12,7 +12,7 @@ class Petrol(Engine):
     def stop(self):
         print("Brrrrr! Petrol engine stopped")
 
-class Electric(Engine):
+class Electric(Engine): 
     def start(self):
         print("ZZZZZ! Electric engine started")
     
@@ -31,3 +31,40 @@ class Car:
         print("Car has stopped...")
         self.engine.stop()
 
+
+#Abstraction
+
+'''💳 Abstraction Challenge: PaymentMethod System
+🎯 Goal:
+Create a base PaymentMethod class that defines how payments work, but doesn't implement the actual logic.
+
+✅ Requirements:
+Define an abstract class PaymentMethod with an abstract method pay(amount).
+
+Create at least two subclasses that inherit from PaymentMethod:
+- CreditCard
+- UPI
+
+Each subclass should implement the pay() method differently:
+CreditCard → should print something like "Paid ₹500 using Credit Card."
+UPI → should print "Paid ₹500 using UPI."
+
+⚠️ Rules:
+- You must use from abc import ABC, abstractmethod.
+- You cannot create an object of PaymentMethod.
+- Only the subclasses can be used to make payments.'''
+
+from abc import ABC,abstractmethod
+
+class PaymentMethod(ABC):
+    @abstractmethod
+    def pay(self,amount):
+        pass
+
+class Creditcard(PaymentMethod):
+    def pay(self,amount):
+        print(f'Paid ₹{amount} using Credit Card.')
+
+class UPI(PaymentMethod):
+    def pay(self,amount):
+        print(f'Paid ₹{amount} using UPI.')
