@@ -56,4 +56,9 @@ A chronological record of my daily/weekly learning milestones in Python and rela
 ## 2025-07-29
 - Abstraction
 - Abstraction vs Encapsulation
+- Exception handling
+
+## 2025-07-30
+- Custom Exception creation
+- How to handle custom exception
 
