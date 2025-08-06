@@ -63,3 +63,9 @@ A chronological record of my daily/weekly learning milestones in Python and rela
 - How to handle custom exception
 - Modules & Packages
 
+## 2025-08-06
+- Data Structures
+- Arrays
+- Linked Lists
+- Stacks
+- Queues
