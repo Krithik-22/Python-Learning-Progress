@@ -104,3 +104,47 @@ queue.dequeue() - remove the item at first and returns it from the queue
 queue.peek() - returns the first element of the queue
 queue.size() - returns the size of the queue
 
+> Hash Table
+- Map, Dictionary, Hash Map, Associative array - different names of the hash table data structure
+- Used for key-value lookup
+fruits  price
+mango -> 10
+kiwi  -> 15
+orange-> 8
+
+Complexity of all the operations in hash table - O(1)
+pricelist = {}
+pricelist['mango'] = 10
+pricelist['kiwi'] = 15
+pricelist['orange'] = 8
+pricelist['mango'] #returns 10
+delete pricelist['kiwi']
+
+BTS of Hash Table
+
+Key(Against which we      Hash Function(Takes the input and gives     Values(The value we need 
+ store the values)    ->    back the hash code/index in array)    ->  to store against a key)
+                                                                      we will have a array of values
+
+- The hash function should always return the same output for the same input
+- Handle Hash Table collisions, i.e. there are possibilities that the hash function could return the same output for different inputs
+  -> Separate Chaining(added image)
+  -> Open Addressing
+
+> Tree
+- All the above discussed were Linear Data Structure
+- Tree is a Hierarchical Data Structure
+- Used to represent Hierarchical Data like Organizational Hierarchy, Directory structure, Databse Indexes, Compiler design, etc.
+
+
+> Heap
+- A tree based data structure in which the value of a parent node is ordered in a certain way with respect to its child nodes
+- It can either be a min-heap or a max-heap
+conditions:
+- should be a complete binary tree
+- Either a Min-heap(parent node <= child nodes) or a max-heap(parent node >= child nodes)
+use cases of heap
+- Whenever you need a min or max value quickly
+- Priority queues
+- Heap sort
+- Dijkstra's algorithm

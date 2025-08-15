@@ -84,3 +84,23 @@ Encapsulation is like your phone locking with a passcode — you can’t mess wi
 
 Abstraction is like a TV remote — it gives you buttons to press, but you don’t know or care how the electronics work inside.
 
+> Decorators
+- Add functionality to an existing function with decorators. This is called metaprogramming.
+
+- A decorator takes a function, extends it and returns. Yes, a function can return a function.
+--------------------------
+def hello(func):                                                                                            
+    def inner():                                                                                            
+        print("Hello ")                                                                                     
+        func()                                                                                              
+    return inner                                                                                            
+                                                                                                            
+def name():                                                                                                 
+    print("Alice")                                                                                          
+obj = hello(name)                                                                                           
+obj()          
+--------------------------
+In the above example, hello() is a decorator.
+In the statement:
+obj = hello(name)          
+the function name() is decorated by the function hello().
