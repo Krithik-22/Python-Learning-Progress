@@ -97,10 +97,18 @@ def hello(func):
                                                                                                             
 def name():                                                                                                 
     print("Alice")                                                                                          
-obj = hello(name)                                                                                           
-obj()          
+name = hello(name)                                                                                           
+name()          
 --------------------------
 In the above example, hello() is a decorator.
 In the statement:
 obj = hello(name)          
 the function name() is decorated by the function hello().
+
+The below is the same as above, for better readability
+-----------------
+@hello
+def name():
+    print("Alice)
+---------------
+
