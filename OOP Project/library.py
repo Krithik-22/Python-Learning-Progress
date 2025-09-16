@@ -8,7 +8,7 @@ class Library:
         pass
 
     def add_book(self, book):
-        id = int(max([book in self._books.keys()], default = 0)) + 1
+        id = int(max([book in self._books], default = 0)) + 1
         self._books[id] = book
 
     def display_books(self):
@@ -19,11 +19,17 @@ class Library:
         del self._books[id]
 
     def add_member(self, member):
-        id = int(max([member in self._members.keys()], default = 0)) + 1
+        id = int(max([member in self._members], default = 0)) + 1
         self._members[id] = member
+        print(f'member with id:{id} has been added succesfully to the Library')
 
     def remove_member(self, id):
         del self._members[id]
+
+    def display_members(self):
+        for id, member in self._members.items():
+            print(f'{id}: {member}')
+
 
     def borrow_book(self, book_id, member_id):
         book = self._books[book_id]

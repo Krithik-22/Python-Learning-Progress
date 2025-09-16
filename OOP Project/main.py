@@ -1,5 +1,6 @@
 from library import Library
 from book import Book
+from member import Member
 
 library_1 = Library()
 
@@ -24,7 +25,9 @@ while True:
         book = Book(name,author)
         library_1.add_book(book)
     elif choice == 2:
-        pass
+        name = input('What is your name: ')
+        member = Member(name)
+        library_1.add_member(member)
     elif choice == 3:
         pass
     elif choice == 4:
@@ -38,7 +41,7 @@ while True:
     elif choice == 8:
         pass
     elif choice == 9:
-        pass
+        library_1.display_members()
     elif choice == 10:
         pass
     else:
