@@ -12,7 +12,8 @@ class Library:
         self._books[id] = book
 
     def display_books(self):
-        print(self._books)
+        for book in self._books.values():
+            print(book)
 
     def remove_book(self,id):
         del self._books[id]
@@ -28,7 +29,5 @@ class Library:
         book = self._books[book_id]
         book.borrow(member_id)
 
-    def return_book(self):
-        
 
     
