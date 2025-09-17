@@ -5,6 +5,9 @@ class Book:
         self.is_available = True
         self.due_date = ''
         self.borrowed_by = ''
+    
+    def __str__(self):
+        return f'{self.name} by {self.author}'
 
     def borrow(self, member_id):
         if self.is_available:
