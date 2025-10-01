@@ -29,9 +29,11 @@ while True:
         member = Member(name)
         library_1.add_member(member)
     elif choice == 3:
-        pass
+        id = int(input("Enter the ID of the Book to be Deleted: "))
+        library_1.remove_book(id)
     elif choice == 4:
-        pass
+        id = int(input("Enter the ID of the Member to be removed form Membership? "))
+        library_1.remove_member(id)
     elif choice == 5:
         pass
     elif choice == 6:

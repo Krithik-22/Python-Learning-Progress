@@ -13,8 +13,8 @@ class Library:
         print(f'Book with id:{id} has been added succesfully to the Library')
 
     def display_books(self):
-        for book in self._books.values():
-            print(book)
+        for id,book in self._books.items():
+            print(f'{id}:{book}')
 
     def remove_book(self,id):
         del self._books[id]
