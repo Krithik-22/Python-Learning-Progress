@@ -8,8 +8,9 @@ class Library:
         pass
 
     def add_book(self, book):
-        id = int(max([book in self._books], default = 0)) + 1
+        id = int(max(self._books.keys(), default = 0)) + 1
         self._books[id] = book
+        print(f'Book with id:{id} has been added succesfully to the Library')
 
     def display_books(self):
         for book in self._books.values():
@@ -19,7 +20,7 @@ class Library:
         del self._books[id]
 
     def add_member(self, member):
-        id = int(max([member in self._members], default = 0)) + 1
+        id = int(max(self._members.keys(), default = 0)) + 1
         self._members[id] = member
         print(f'member with id:{id} has been added succesfully to the Library')
 
@@ -34,9 +35,3 @@ class Library:
     def borrow_book(self, book_id, member_id):
         book = self._books[book_id]
         book.borrow(member_id)
-<<<<<<< HEAD
-
-
-    
-=======
->>>>>>> cf0b0a0 (log: commit the merged changes)
