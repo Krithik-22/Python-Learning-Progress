@@ -34,6 +34,9 @@ class Library:
     def borrow_book(self, book_id, member_id):
         book = self._books[book_id]
         book.borrow(member_id)
+<<<<<<< HEAD
 
 
     
+=======
+>>>>>>> cf0b0a0 (log: commit the merged changes)

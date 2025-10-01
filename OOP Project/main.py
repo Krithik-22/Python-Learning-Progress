@@ -1,6 +1,9 @@
 from library import Library
 from book import Book
+<<<<<<< HEAD
 from member import Member
+=======
+>>>>>>> cf0b0a0 (log: commit the merged changes)
 
 library_1 = Library()
 
