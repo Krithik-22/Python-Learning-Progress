@@ -35,16 +35,21 @@ while True:
         id = int(input("Enter the ID of the Member to be removed form Membership? "))
         library_1.remove_member(id)
     elif choice == 5:
-        pass
+        book = input("Enter the name of the Book you want to borrow: ")
+        member_id = int(input('Enter your member ID: '))
+        library_1.borrow_book(book, member_id)
     elif choice == 6:
-        pass
+        book = input("Enter the name of the Book you want to return: ")
+        member_id = int(input('Enter your member ID: '))
+        library_1.return_book(book, member_id)
     elif choice == 7:
         library_1.display_books()
     elif choice == 8:
-        pass
+        library_1.display_available_books()
     elif choice == 9:
         library_1.display_members()
     elif choice == 10:
-        pass
+        member_id = int(input('Enter your member ID: '))
+        library_1.books_borrowed_by_member(member_id)
     else:
         break

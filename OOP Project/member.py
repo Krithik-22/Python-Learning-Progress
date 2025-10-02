@@ -8,3 +8,6 @@ class Member:
 
     def add_book_to_my_list(self, book):
         self.borrowed_books.append(book)
+    
+    def remove_book_from_my_list(self, book):
+        self.borrowed_books.remove(book)
